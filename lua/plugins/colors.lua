@@ -1,14 +1,14 @@
 return {
   {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin", -- or "tokyonight", "kanagawa"
-    },
-  },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    lazy = true,
-    opts = { flavour = "frappe", transparent_background = true }, -- example variant
+    "tanvirtin/monokai.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("monokai").setup({
+        palette = require("monokai").ristretto,
+        transparent = false,
+      })
+      vim.cmd.colorscheme("monokai_ristretto")
+    end,
   },
 }
