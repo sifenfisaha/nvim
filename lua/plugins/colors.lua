@@ -6,7 +6,6 @@ return {
     config = function()
       require("monokai").setup({
         palette = require("monokai").ristretto,
-        transparent = false,
       })
       vim.cmd.colorscheme("monokai_ristretto")
     end,
